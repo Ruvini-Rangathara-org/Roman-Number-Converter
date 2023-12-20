@@ -15,20 +15,18 @@ public class RomanNumber {
         //XI->11, XII->12, XIII->13, XIV->14, XV->15, XVI->16, XVII->17, XVIII->18, XIX->19, XX->20
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("\nEnter a Roman Number : ");
-        String romanNumber = scanner.nextLine();
-        romanNumber = romanNumber.toUpperCase();
 
-        char[] ar = romanNumber.toCharArray();
+        for (int i = 0; i < 3; i++) {
+            System.out.print("\nEnter a Roman Number : ");
+            String romanNumber = scanner.nextLine();
+            romanNumber = romanNumber.toUpperCase();
 
-        int[] intArr = translateArray(ar);
-
-        int num =  getDecimalNumber(ar, intArr);
-
-        System.out.println("Decimal Number is : " + num);
-
+            char[] ar = romanNumber.toCharArray();
+            int[] intArr = translateArray(ar);
+            int num =  getDecimalNumber(ar, intArr);
+            System.out.println("Decimal Number is : " + num);
+        }
     }
-
     private static int getDecimalNumber(char[] ar, int[] intArr) {
 
         int[] indexes = new int[0];
@@ -86,5 +84,4 @@ public class RomanNumber {
         return intAr;
 
     }
-
 }
